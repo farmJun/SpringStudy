@@ -1,6 +1,6 @@
 package study.core.member;
 
-public interface MemoryService {
+public interface MemberService {
     void join(Member member);
 
     Member findMember(Long memberId);

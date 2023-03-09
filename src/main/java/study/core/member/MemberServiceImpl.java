@@ -1,6 +1,6 @@
 package study.core.member;
 
-public class MemoryServiceImpl implements MemoryService {
+public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
