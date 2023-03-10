@@ -2,14 +2,12 @@ package study.core.order;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import study.core.member.Grade;
-import study.core.member.Member;
-import study.core.member.MemberService;
-import study.core.member.MemberServiceImpl;
+import study.core.discount.FixDiscountPolicy;
+import study.core.member.*;
 
 public class OrderServiceTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService = new MemberServiceImpl(new MemoryMemberRepository());
+    OrderService orderService = new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
 
     @Test
     void createOrder(){
