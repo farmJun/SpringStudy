@@ -6,7 +6,6 @@ import study.core.member.Grade;
 import study.core.member.Member;
 
 @Component
-@Qualifier("mainDiscountPolicy")
 public class RateDiscountPolicy implements DiscountPolicy {
     private int discountPercent = 10;
 
